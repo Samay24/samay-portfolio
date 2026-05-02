@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(cp \"c:/Users/Samay/OneDrive/Pictures/Screenshots/Screenshot 2026-04-23 134634.png\" \"c:/Users/Samay/samay-portfolio/public/project1.png\")",
+      "Bash(cp \"c:/Users/Samay/OneDrive/Pictures/Screenshots/Screenshot 2026-04-23 134650.png\" \"c:/Users/Samay/samay-portfolio/public/project2.png\")",
+      "Bash(cp \"c:/Users/Samay/OneDrive/Pictures/Screenshots/Screenshot 2026-04-23 134704.png\" \"c:/Users/Samay/samay-portfolio/public/project3.png\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://localhost:5174/src/App.css)"
+    ]
+  }
+}
