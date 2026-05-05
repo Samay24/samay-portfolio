@@ -34,6 +34,7 @@ I combine analytical thinking, visualization skills, and modern tools to solve r
 - Built an interactive Power BI dashboard
 - Analyzed revenue, sales trends, and customer behavior
 - Delivered actionable insights for business decisions
+  
 📈 iPhone Sales Analysis
 - Cleaned and transformed datasets using Python (Pandas)
 - Created visual reports using Power BI & Matplotlib
