@@ -1,16 +1,65 @@
-# React + Vite
+# Samay Gupta
+## 🚀 Data Analyst | Turning Data into Actionable Insights
+<p align="center"> <a href="https://samay-portfolio.vercel.app/"> <img src="https://img.shields.io/badge/🌐 Live Portfolio-0A192F?style=for-the-badge&logo=vercel&logoColor=white"/> </a> <a href="https://www.linkedin.com/in/samaygupta24/"> <img src="https://img.shields.io/badge/💼 LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/> </a> <a href="mailto:samaygupta963@gmail.com"> <img src="https://img.shields.io/badge/📧 Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/> </a> </p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 About Me
 
-Currently, two official plugins are available:
+Hi, I'm Samay Gupta, a Data Analyst focused on transforming raw data into meaningful insights that drive business decisions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I combine analytical thinking, visualization skills, and modern tools to solve real-world problems efficiently.
 
-## React Compiler
+📊 Strong in data analysis & dashboarding
+⚡ Skilled in turning complex data into simple insights
+🎯 Focused on business impact, not just numbers
+🚀 Actively building real-world projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔗 Explore Here
+👉 https://samay-portfolio.vercel.app/
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+💻 Languages & Tools
+<p> <img src="https://skillicons.dev/icons?i=python,sql,git,github" /> 
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📊 Data Analytics  
+- Data Analysis  
+- Power BI  
+- Excel  
+- Data Cleaning & Transformation  
+- Exploratory Data Analysis (EDA)  
+- Dashboard Development   
+
+## 🚀 Featured Work
+📊 E-Commerce Sales Dashboard
+- Built an interactive Power BI dashboard
+- Analyzed revenue, sales trends, and customer behavior
+- Delivered actionable insights for business decisions
+📈 iPhone Sales Analysis
+- Cleaned and transformed datasets using Python (Pandas)
+- Created visual reports using Power BI & Matplotlib
+
+## 🎯 What This Portfolio Shows
+- Clean and professional UI
+- Real-world data projects
+- Strong focus on insights
+- Recruiter-friendly presentation
+
+## 📬 Contact
+📧 Email: samaygupta963@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/samaygupta24/
+🌐 Portfolio: https://samay-portfolio.vercel.app/
+
+## ⚡ Why Hire Me?
+- I focus on business insights, not just dashboards
+- I build clean, real-world projects
+- I learn fast and adapt quickly
+- I bring data + clarity + execution
+
+## 🔥 Future Goals
+- 📌 Build advanced analytics projects
+- 📌 Explore AI + Data integration
+- 📌 Work on real-world business datasets
+- 📌 Learning different technologies
+
+## ⭐ Support
+If you find my work valuable, consider giving a ⭐ to my repositories!
