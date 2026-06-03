@@ -86,6 +86,12 @@ const CertificationCard = ({ title, company, link }) => (
 
 const certifications = [
   {
+    title: "Artificial Intelligence Fundamentals",
+    company: "IBM",
+    link: "https://www.credly.com/badges/58ce9798-27a8-40dc-abc1-559e116af927/public_url"
+  },
+
+  {
     title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     company: "Oracle",
     link: "Oracle_Certificate.pdf"
