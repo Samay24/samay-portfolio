@@ -29,6 +29,8 @@ const FALLBACK_RESPONSES = {
   "aws": "I have the 'Foundation of Prompt Engineering' certificate from AWS.",
   "cisco": "I have the 'Introduction to Data Science' certificate from Cisco.",
   "contact": "Let's connect! You can use the contact form on this page, or reach out via:
+â€¢ Email: samaygupta963@email.com
+â€¢ Phone: +91-9157657443
 â€¢ LinkedIn: linkedin.com/in/samaygupta24/
 â€¢ GitHub: github.com/Samay24",
   "resume": "You can download my latest resume using the 'Resume' button in the top navigation bar of this portfolio!",
