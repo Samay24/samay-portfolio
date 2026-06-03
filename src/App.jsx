@@ -86,7 +86,7 @@ const CertificationCard = ({ title, company, link }) => (
 
 const certifications = [
   {
-    title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     company: "Oracle",
     link: "Oracle_Certificate.pdf"
   },
