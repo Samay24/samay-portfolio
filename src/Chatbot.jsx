@@ -35,7 +35,7 @@ const FALLBACK_RESPONSES = {
   "sql": "I use SQL for complex data extraction, transformation, and optimization. I'm proficient in window functions, aggregations, and subqueries.",
   "python": "In Python, I use Pandas and NumPy for Exploratory Data Analysis (EDA) and cleaning. I also build automation scripts and custom visualizations.",
   "power bi": "I build interactive Power BI dashboards that feature automated data modeling, DAX measures, and dynamic slicers for deep-dive analysis.",
-  "hiring": "I am currently open to new opportunities! I can help with data analysis, dashboard design, automation, or deep-dive reporting. Feel free to reach out via the contact form.",
+  "hiring": "I am currently open to new opportunities! I can help with data analysis, dashboard design, automation, or deep-dive reporting. You can reach out to Samay directly at samaygupta963@email.com or call him at +91-9157657443.",
   "default": "I'm Samay's AI assistant. I can tell you all about his 1+ years of Data Analysis experience, his SQL/Python skills, his Power BI projects, or his certifications from Oracle, IBM, and AWS!"
 };
 
@@ -54,6 +54,10 @@ Samay is a Data Analyst with 1+ years of experience.
 Your goal is to provide detailed and professional answers about Samay's expertise.
 
 PROFESSIONAL BACKGROUND:
+CONTACT INFO:
+- Email: samaygupta963@email.com
+- Phone: +91-9157657443
+
 - Role: Data Analyst / AI & Automation Specialist.
 - Experience: 1+ Years delivering actionable insights.
 
