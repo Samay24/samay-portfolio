@@ -5,25 +5,25 @@ import { FaRobot, FaPaperPlane, FaMinus } from "react-icons/fa";
 // --- FALLBACK LOGIC ---
 const FALLBACK_RESPONSES = {
   "projects": "I've delivered high-impact data projects:\n1. iPhone Sales Analysis: Engineered a dynamic Power BI dashboard to identify regional gaps.\n2. IPL Historical Dashboard: Analyzed 17+ years of complex cricket data for predictive modeling.\n3. Global E-commerce Insights: Visualized multi-dimensional datasets, supporting a 10% reduction in logistical overhead.",
-  "skills": "I have a robust technical stack:\nâ€¢ SQL: Advanced querying, Joins, and CTEs (86%)\nâ€¢ Python: Data cleaning and analysis with Pandas/NumPy (85%)\nâ€¢ Power BI: Interactive dashboards and automated data modeling (80%)\nâ€¢ Excel: Advanced formulas, Pivot Tables, and business intelligence (90%)\nâ€¢ Others: AI, Data Visualization, n8n Automation, and Machine Learning.",
+  "skills": "I have a robust technical stack:\n• SQL: Advanced querying, Joins, and CTEs (86%)\n• Python: Data cleaning and analysis with Pandas/NumPy (85%)\n• Power BI: Interactive dashboards and automated data modeling (80%)\n• Excel: Advanced formulas, Pivot Tables, and business intelligence (90%)\n• Others: AI, Data Visualization, n8n Automation, and Machine Learning.",
   "experience": "I have over 1 year of experience as a Data Analyst. I specialize in turning raw, messy data into clear, actionable business intelligence with a focus on delivering measurable results.",
-  "certifications": "I hold several professional certifications:\nâ€¢ Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate\nâ€¢ Databricks Accreditation - Generative AI Fundamentals\nâ€¢ AWS - Foundation of Prompt Engineering\nâ€¢ IBM - Artificial Intelligence Fundamentals\nâ€¢ Cisco - Introduction to Data Science\nâ€¢ Analytics Vidhya - n8n automation tool\nâ€¢ LinkedIn Learning certifications in Data Analytics and Business Analysis.",
-  "certificate": "I hold professional certifications from Oracle (AI Foundations Associate), Databricks (GenAI & Lakehouse), AWS (Prompt Engineering), IBM (AI Fundamentals), and Cisco (Data Science).",
-  "oracle": "I am an 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate'.",
-  "ibm": "I am certified in 'Artificial Intelligence Fundamentals' by IBM.",
-  "aws": "I have the 'Foundation of Prompt Engineering' certificate from AWS.",
-  "cisco": "I have the 'Introduction to Data Science' certificate from Cisco.",
-  "contact": "Let's connect! You can use the contact form on this page, or reach out via:\nâ€¢ Email: samaygupta963@email.com\nâ€¢ Phone: +91-9157657443\nâ€¢ LinkedIn: linkedin.com/in/samaygupta24/\nâ€¢ GitHub: github.com/Samay24",
+  "certifications": "I hold several professional certifications:\n• Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate\n• Databricks Accreditation - Generative AI Fundamentals\n• AWS - Foundation of Prompt Engineering\n• IBM - Artificial Intelligence Fundamentals\n• Cisco - Introduction to Data Science\n• Analytics Vidhya - n8n automation tool\n• LinkedIn Learning certifications in Data Analytics and Business Analysis.",
+  "hire": "I am currently open to new opportunities! I can help with data analysis, dashboard design, automation, or deep-dive reporting. You can reach out to Samay directly at samaygupta963@email.com or call him at +91-9157657443.",
+  "contact": "Let's connect! You can use the contact form on this page, or reach out via:\n• Email: samaygupta963@email.com\n• Phone: +91-9157657443\n• LinkedIn: linkedin.com/in/samaygupta24/\n• GitHub: github.com/Samay24",
   "resume": "You can download my latest resume using the 'Resume' button in the top navigation bar of this portfolio!",
   "sql": "I use SQL for complex data extraction, transformation, and optimization. I'm proficient in window functions, aggregations, and subqueries.",
   "python": "In Python, I use Pandas and NumPy for Exploratory Data Analysis (EDA) and cleaning. I also build automation scripts and custom visualizations.",
   "power bi": "I build interactive Power BI dashboards that feature automated data modeling, DAX measures, and dynamic slicers for deep-dive analysis.",
-  "hiring": "I am currently open to new opportunities! I can help with data analysis, dashboard design, automation, or deep-dive reporting. You can reach out to Samay directly at samaygupta963@email.com or call him at +91-9157657443.",
   "default": "I'm Samay's AI assistant. I can tell you all about his 1+ years of Data Analysis experience, his SQL/Python skills, his Power BI projects, or his certifications from Oracle, IBM, and AWS!"
 };
 
 const getFallbackResponse = (userText) => {
   const lowerText = userText.toLowerCase();
+  
+  // Prioritize hiring/contact
+  if (lowerText.includes("hire") || lowerText.includes("opportunity") || lowerText.includes("work")) return FALLBACK_RESPONSES.hire;
+  if (lowerText.includes("contact") || lowerText.includes("email") || lowerText.includes("phone") || lowerText.includes("call")) return FALLBACK_RESPONSES.contact;
+  
   for (const key in FALLBACK_RESPONSES) {
     if (lowerText.includes(key)) return FALLBACK_RESPONSES[key];
   }
