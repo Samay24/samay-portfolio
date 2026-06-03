@@ -249,7 +249,8 @@ h2 {
   margin-top: 60px;
   padding-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
+
+    justify-content: center;}
 
 .hero-stat {
   display: flex;
