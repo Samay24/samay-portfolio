@@ -619,6 +619,201 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* ================= CHATBOT ================= */
+
+.chatbot-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1001;
+}
+
+.chat-bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #020617;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+.chat-window {
+  width: 350px;
+  height: 500px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.light .chat-window {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+.chat-header {
+  padding: 20px;
+  background: rgba(56, 189, 248, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.bot-icon {
+  color: var(--primary);
+}
+
+.header-actions button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.header-actions button:hover {
+  color: var(--primary);
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 80%;
+  display: flex;
+}
+
+.message.bot { align-self: flex-start; }
+.message.user { align-self: flex-end; }
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.bot .message-content {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border-bottom-left-radius: 4px;
+}
+
+.user .message-content {
+  background: var(--primary);
+  color: #020617;
+  border-bottom-right-radius: 4px;
+  font-weight: 500;
+}
+
+.typing span {
+  animation: blink 1.4s infinite both;
+  font-size: 20px;
+  line-height: 0;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.quick-actions {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-action-btn {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quick-action-btn:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.chat-input {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-input input {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 15px;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.chat-input button {
+  background: var(--primary);
+  color: #020617;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .chat-window {
+    width: calc(100vw - 40px);
+    height: 400px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1024px) {
@@ -640,4 +835,111 @@ h2 {
   .hero-content h1 { font-size: 36px; }
   .hero-cta { flex-direction: column; }
   .hero-stats { flex-direction: column; align-items: center; }
+}
+
+
+/* ================= CERTIFICATIONS ================= */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  padding: 40px 25px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.light .cert-card {
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.cert-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--primary);
+  background: rgba(56, 189, 248, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.cert-icon-wrapper {
+  margin-bottom: 25px;
+  font-size: 48px;
+  color: var(--primary);
+  background: rgba(56, 189, 248, 0.1);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.cert-card:hover .cert-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(56, 189, 248, 0.2);
+  filter: drop-shadow(0 0 15px var(--primary));
+}
+
+.cert-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.light .cert-info h3 {
+  color: #0f172a;
+}
+
+.cert-info p {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #020617;
+  background: var(--primary);
+  padding: 12px 24px;
+  border-radius: 14px;
+  transition: 0.3s;
+  border: 1px solid var(--primary);
+}
+
+.cert-link:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+.cert-link svg {
+  font-size: 12px;
 }

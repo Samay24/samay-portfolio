@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import { Typewriter } from "react-simple-typewriter";
 import emailjs from "emailjs-com";
 import { motion as Motion, useInView } from "framer-motion";
 import "./App.css";
-import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator, FaAward } from "react-icons/fa";
 import { SiPandas, SiNumpy, SiMysql } from "react-icons/si";
+import Chatbot from "./Chatbot";
 
 const SkillCard = ({ name, percent, icon: Icon }) => {
   const [count, setCount] = useState(0);
@@ -65,9 +66,74 @@ const Section = ({ id, children, className = "" }) => {
   );
 };
 
+
+const CertificationCard = ({ title, company, link }) => (
+  <div className="cert-card">
+    <div className="cert-icon-wrapper">
+      <FaAward className="cert-icon" />
+    </div>
+    <div className="cert-info">
+      <h3>{title}</h3>
+      <p>{company}</p>
+      {link !== "#" && (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="cert-link">
+          View Certificate <FaExternalLinkAlt />
+        </a>
+      )}
+    </div>
+  </div>
+);
+
+const certifications = [
+  {
+    title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    company: "Oracle",
+    link: "https://www.credly.com/badges/58ce9798-27a8-40dc-abc1-559e116af927/public_url"
+  },
+  {
+    title: "Databricks Accreditation - Generative AI Fundamentals",
+    company: "Databricks",
+    link: "https://credentials.databricks.com/5f325804-36e8-41bf-9257-68add2f4ea9d#acc.C68c1tak"
+  },
+  {
+    title: "Foundation of Prompt Engineering",
+    company: "AWS",
+    link: "Prompt_Engineering_Certificate.pdf"
+  },
+  {
+    title: "n8n automation tool",
+    company: "Analytics Vidhya",
+    link: "https://courses.analyticsvidhya.com/certificates/mpsjvz2civ"
+  },
+  {
+    title: "Introduction to Career Skills in Data Analytics",
+    company: "LinkedIn",
+    link: "https://www.linkedin.com/learning/certificates/28b37978cf93fecf06eb331189f19133162330951befe76a53f02e5cb59b9482"
+  },
+  {
+    title: "Business Analysis Foundation",
+    company: "LinkedIn",
+    link: "https://www.linkedin.com/learning/certificates/7424d7098b8c163a969e99e53c68f60100ab368d8656101e8a70afca7cd05b08"
+  },
+  {
+    title: "Introduction to Data Science",
+    company: "Cisco",
+    link: "https://www.credly.com/badges/3f2d8462-cc91-4e0b-8a55-2f7f31eb0e61/linked_in_profile"
+  }
+];
+
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [particlesInit, setParticlesInit] = useState(false);
   const form = useRef();
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setParticlesInit(true);
+    });
+  }, []);
 
   const handleInquiry = (serviceName) => {
     const messageField = document.querySelector('textarea[name="message"]');
@@ -78,10 +144,6 @@ export default function App() {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  };
-
-  const particlesInit = async (main) => {
-    await loadFull(main);
   };
 
   const sendEmail = (e) => {
@@ -104,55 +166,56 @@ export default function App() {
 
   return (
     <div className={darkMode ? "dark" : "light"}>
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          fullScreen: { enable: false },
-          particles: {
-            number: { value: 60, density: { enable: true, value_area: 800 } },
-            color: { value: ["#38bdf8", "#60a5fa"] },
-            links: { 
-              enable: true, 
-              distance: 150, 
-              color: "#38bdf8", 
-              opacity: 0.2,
-              width: 1
+      {particlesInit && (
+        <Particles
+          id="tsparticles"
+          options={{
+            fullScreen: { enable: false },
+            particles: {
+              number: { value: 60, density: { enable: true, value_area: 800 } },
+              color: { value: ["#38bdf8", "#60a5fa"] },
+              links: { 
+                enable: true, 
+                distance: 150, 
+                color: "#38bdf8", 
+                opacity: 0.2,
+                width: 1
+              },
+              move: { 
+                enable: true, 
+                speed: 1, 
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+              },
+              opacity: { 
+                value: 0.3, 
+                random: true,
+                anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+              },
+              size: { 
+                value: { min: 1, max: 3 },
+                random: true,
+                anim: { enable: true, speed: 2, size_min: 0.1, sync: false }
+              },
             },
-            move: { 
-              enable: true, 
-              speed: 1, 
-              direction: "none",
-              random: true,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
+            interactivity: {
+              events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" },
+                resize: true,
+              },
+              modes: {
+                grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                push: { particles_nb: 4 },
+              },
             },
-            opacity: { 
-              value: 0.3, 
-              random: true,
-              anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
-            },
-            size: { 
-              value: { min: 1, max: 3 },
-              random: true,
-              anim: { enable: true, speed: 2, size_min: 0.1, sync: false }
-            },
-          },
-          interactivity: {
-            events: {
-              onhover: { enable: true, mode: "grab" },
-              onclick: { enable: true, mode: "push" },
-              resize: true,
-            },
-            modes: {
-              grab: { distance: 140, line_linked: { opacity: 0.5 } },
-              push: { particles_nb: 4 },
-            },
-          },
-          retina_detect: true,
-        }}
-      />
+            retina_detect: true,
+          }}
+        />
+      )}
 
       <nav>
         <div className="nav-links">
@@ -160,12 +223,13 @@ export default function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </div>
 
         <div className="nav-actions">
-          <a href="/Samay_Gupta_Resume.pdf" download className="resume-btn">
+          <a href="Samay_Gupta_Resume.pdf" download className="resume-btn">
             <FaDownload /> Resume
           </a>
           <button onClick={() => setDarkMode(!darkMode)}>
@@ -232,7 +296,7 @@ export default function App() {
       <Section id="about">
         <div className="section-content about-container">
           <div className="photo-wrapper">
-            <img src="/profile.png" alt="Samay Gupta" />
+            <img src="profile.png" alt="Samay Gupta" />
             <div className="photo-glow"></div>
           </div>
 
@@ -280,7 +344,7 @@ export default function App() {
           <h2>Featured Projects</h2>
           <div className="projects-grid">
             <div className="project-card">
-              <img src="/project1.png" alt="Iphone Sales Analysis" />
+              <img src="project1.png" alt="Iphone Sales Analysis" />
               <div className="project-info">
                 <h3>Iphone Sales Analysis</h3>
                 <ul className="project-points">
@@ -296,7 +360,7 @@ export default function App() {
               </div>
             </div>
             <div className="project-card">
-              <img src="/project2.png" alt="Ipl Analysis Dashboard" />
+              <img src="project2.png" alt="Ipl Analysis Dashboard" />
               <div className="project-info">
                 <h3>IPL Historical Performance</h3>
                 <ul className="project-points">
@@ -312,7 +376,7 @@ export default function App() {
               </div>
             </div>
             <div className="project-card">
-              <img src="/project3.png" alt="E-commerce Sales Analysis" />
+              <img src="project3.png" alt="E-commerce Sales Analysis" />
               <div className="project-info">
                 <h3>Global E-commerce Insights</h3>
                 <ul className="project-points">
@@ -327,6 +391,19 @@ export default function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      
+      {/* CERTIFICATIONS */}
+      <Section id="certifications">
+        <div className="section-content">
+          <h2>Certifications</h2>
+          <div className="certifications-grid">
+            {certifications.map((cert, index) => (
+              <CertificationCard key={index} {...cert} />
+            ))}
           </div>
         </div>
       </Section>
@@ -377,6 +454,7 @@ export default function App() {
       <footer style={{ textAlign: "center", padding: "40px 20px", opacity: 0.6 }}>
         © 2026 Samay Gupta | Data Analyst
       </footer>
+      <Chatbot />
     </div>
   );
 }
