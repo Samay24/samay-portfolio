@@ -4,16 +4,39 @@ import { FaRobot, FaPaperPlane, FaMinus } from "react-icons/fa";
 
 // --- FALLBACK LOGIC ---
 const FALLBACK_RESPONSES = {
-  "projects": "I've delivered high-impact data projects:\n1. iPhone Sales Analysis: Identified regional gaps using Power BI.\n2. IPL Historical Dashboard: Analyzed 17+ years of cricket data.\n3. E-commerce Insights: Reduced logistical overhead by 10%.\nWhich one would you like to hear more about?",
-  "skills": "I have a robust technical stack:\n• SQL: Advanced querying, Joins, and CTEs (86%)\n• Python: Data cleaning with Pandas/NumPy (85%)\n• Visualization: Power BI and interactive dashboards (80%)\n• Excel: Advanced formulas and Pivot Tables (90%)",
-  "experience": "I have over 1 year of experience as a Data Analyst. I specialize in turning 'messy' data into clear, actionable business intelligence with a focus on client satisfaction.",
-  "contact": "Let's connect! You can use the contact form below, or reach out directly:\n• LinkedIn: linkedin.com/in/samaygupta24/\n• GitHub: github.com/Samay24",
-  "resume": "My resume highlights my technical certifications and project metrics. You can download it using the button in the top navigation bar!",
-  "sql": "I use SQL for complex data extraction and transformation. I'm comfortable with aggregations, window functions, and optimizing queries for large datasets.",
-  "python": "In Python, I primarily use Pandas and NumPy for EDA (Exploratory Data Analysis). I also have experience with Matplotlib/Seaborn for custom data viz.",
-  "power bi": "I build dynamic Power BI dashboards that feature automated data modeling, DAX measures, and interactive slicers for stakeholders.",
-  "hiring": "I am currently open to freelance opportunities and full-time Data Analyst roles! I can help with dashboarding, data cleaning, or deep-dive analysis reports.",
-  "default": "I'm currently running in 'Lite Mode' because my AI brain is resting. But I can still tell you about my SQL/Python skills, specific projects, or my availability for hire!"
+  "projects": "I've delivered high-impact data projects:
+1. iPhone Sales Analysis: Engineered a dynamic Power BI dashboard to identify regional gaps.
+2. IPL Historical Dashboard: Analyzed 17+ years of complex cricket data for predictive modeling.
+3. Global E-commerce Insights: Visualized multi-dimensional datasets, supporting a 10% reduction in logistical overhead.",
+  "skills": "I have a robust technical stack:
+â€¢ SQL: Advanced querying, Joins, and CTEs (86%)
+â€¢ Python: Data cleaning and analysis with Pandas/NumPy (85%)
+â€¢ Power BI: Interactive dashboards and automated data modeling (80%)
+â€¢ Excel: Advanced formulas, Pivot Tables, and business intelligence (90%)
+â€¢ Others: AI, Data Visualization, n8n Automation, and Machine Learning.",
+  "experience": "I have over 1 year of experience as a Data Analyst. I specialize in turning raw, messy data into clear, actionable business intelligence with a focus on delivering measurable results.",
+  "certifications": "I hold several professional certifications:
+â€¢ Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+â€¢ Databricks Accreditation - Generative AI Fundamentals
+â€¢ AWS - Foundation of Prompt Engineering
+â€¢ IBM - Artificial Intelligence Fundamentals
+â€¢ Cisco - Introduction to Data Science
+â€¢ Analytics Vidhya - n8n automation tool
+â€¢ LinkedIn Learning certifications in Data Analytics and Business Analysis.",
+  "certificate": "I hold professional certifications from Oracle (AI Foundations Associate), Databricks (GenAI & Lakehouse), AWS (Prompt Engineering), IBM (AI Fundamentals), and Cisco (Data Science).",
+  "oracle": "I am an 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate'.",
+  "ibm": "I am certified in 'Artificial Intelligence Fundamentals' by IBM.",
+  "aws": "I have the 'Foundation of Prompt Engineering' certificate from AWS.",
+  "cisco": "I have the 'Introduction to Data Science' certificate from Cisco.",
+  "contact": "Let's connect! You can use the contact form on this page, or reach out via:
+â€¢ LinkedIn: linkedin.com/in/samaygupta24/
+â€¢ GitHub: github.com/Samay24",
+  "resume": "You can download my latest resume using the 'Resume' button in the top navigation bar of this portfolio!",
+  "sql": "I use SQL for complex data extraction, transformation, and optimization. I'm proficient in window functions, aggregations, and subqueries.",
+  "python": "In Python, I use Pandas and NumPy for Exploratory Data Analysis (EDA) and cleaning. I also build automation scripts and custom visualizations.",
+  "power bi": "I build interactive Power BI dashboards that feature automated data modeling, DAX measures, and dynamic slicers for deep-dive analysis.",
+  "hiring": "I am currently open to new opportunities! I can help with data analysis, dashboard design, automation, or deep-dive reporting. Feel free to reach out via the contact form.",
+  "default": "I'm Samay's AI assistant. I can tell you all about his 1+ years of Data Analysis experience, his SQL/Python skills, his Power BI projects, or his certifications from Oracle, IBM, and AWS!"
 };
 
 const getFallbackResponse = (userText) => {
@@ -26,13 +49,35 @@ const getFallbackResponse = (userText) => {
 
 // --- SYSTEM PROMPT ---
 const SYSTEM_PROMPT = `
-You are an AI assistant for Samay Gupta's portfolio. 
+You are an AI assistant for Samay Gupta's portfolio.
 Samay is a Data Analyst with 1+ years of experience.
-Your goal is to answer questions about Samay's skills, projects, and professional background.
+Your goal is to provide detailed and professional answers about Samay's expertise.
 
-TECHNICAL SKILLS: SQL (86%), Python (85%), Power BI (80%), Excel (90%).
-FEATURED PROJECTS: iPhone Sales Analysis, IPL Historical Performance, Global E-commerce Insights.
-TONE: Professional, helpful, concise.
+PROFESSIONAL BACKGROUND:
+- Role: Data Analyst / AI & Automation Specialist.
+- Experience: 1+ Years delivering actionable insights.
+
+CORE TECHNICAL SKILLS:
+- SQL (86%): Advanced querying, Joins, CTEs, Optimization.
+- Python (85%): Data Analysis (Pandas, NumPy), Automation.
+- Power BI (80%): Interactive Dashboards, Data Modeling, DAX.
+- Excel (90%): Advanced formulas, Pivot Tables, Business Intelligence.
+
+CERTIFICATIONS:
+- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate.
+- Databricks Accreditation - Generative AI Fundamentals.
+- AWS - Foundation of Prompt Engineering.
+- IBM - Artificial Intelligence Fundamentals.
+- Cisco - Introduction to Data Science.
+- Analytics Vidhya - n8n automation tool.
+- LinkedIn - Data Analytics & Business Analysis.
+
+FEATURED PROJECTS:
+1. iPhone Sales Analysis: Power BI dashboard identifying regional performance gaps.
+2. IPL Historical Performance: Analyzing 17+ years of cricket data with dynamic filtering.
+3. Global E-commerce Insights: Visualizing profitability drivers and reducing logistical overhead by 10%.
+
+TONE: Senior Professional, helpful, concise, and technically grounded.
 `;
 
 const QUICK_ACTIONS = [
