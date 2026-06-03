@@ -88,7 +88,7 @@ const certifications = [
   {
     title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
     company: "Oracle",
-    link: "https://www.credly.com/badges/58ce9798-27a8-40dc-abc1-559e116af927/public_url"
+    link: "Oracle_Certificate.pdf"
   },
   {
     title: "Databricks Accreditation - Generative AI Fundamentals",
