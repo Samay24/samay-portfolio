@@ -279,7 +279,7 @@ export default function App() {
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="hero-stat">
-              <span className="stat-value">2</span>
+              <span className="stat-value">4</span>
               <span className="stat-label">Projects Delivered</span>
             </div>
             <div className="hero-stat">
@@ -389,6 +389,22 @@ export default function App() {
                   <li><strong>Situation:</strong> Business struggled to identify specific drivers of regional profitability and shipping efficiency.</li>
                   <li><strong>Action:</strong> Visualized multi-dimensional datasets using advanced slicers and custom KPIs in Power BI.</li>
                   <li><strong>Result:</strong> Pinpointed high-cost shipping modes, supporting a 10% reduction in logistical overhead.</li>
+                </ul>
+                <div className="project-links centered">
+                  <a href="https://github.com/Samay24/data-analysis_projects" target="_blank" rel="noopener noreferrer" className="github-link">
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="project4.png" alt="Product Feedback Analysis" />
+              <div className="project-info">
+                <h3>Product Feedback Analysis</h3>
+                <ul className="project-points">
+                  <li><strong>Situation:</strong> Analyze Zomato app reviews to identify drivers of satisfaction and improvement areas.</li>
+                  <li><strong>Action:</strong> Performed sentiment analysis on reviews using NLP, thematic analysis, and sentiment scoring models.</li>
+                  <li><strong>Result:</strong> Found top 3 pain points; recommended app improvements boosting user satisfaction by 18%.</li>
                 </ul>
                 <div className="project-links centered">
                   <a href="https://github.com/Samay24/data-analysis_projects" target="_blank" rel="noopener noreferrer" className="github-link">
