@@ -341,7 +341,7 @@ export default function App() {
             <SkillCard name="Data Visualization" percent="85" icon={FaChartPie} />
             <SkillCard name="AI" percent="75" icon={FaRobot} />
             <SkillCard name="Data Storytelling" percent="85" icon={FaChartLine} />
-            <SkillCard name="User Research" percent="80" icon={FaUserFriends} />
+            <SkillCard name="Research" percent="80" icon={FaUserFriends} />
           </div>
         </div>
       </Section>
