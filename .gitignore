@@ -24,3 +24,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Test files
+check_console.*
+test_*.cjs
+test_*.js
+
+# Workspace
+*.code-workspace
+
+# Project files
+CHATBOT_*

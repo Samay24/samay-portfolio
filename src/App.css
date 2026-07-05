@@ -452,37 +452,7 @@ h2 {
   object-fit: cover;
 }
 
-.project-banner {
-  width: 100%;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-}
 
-.project-banner-icon {
-  font-size: 64px;
-  opacity: 0.9;
-}
-
-.project-banner-label {
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0.8;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 6px 16px;
-  border-radius: 20px;
-}
-
-.fraud-banner {
-  background: linear-gradient(135deg, #1a0a2e, #16213e, #0f3460);
-  color: #e94560;
-}
 
 .project-card h3 {
   padding: 24px 24px 10px;
