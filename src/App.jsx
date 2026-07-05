@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import emailjs from "emailjs-com";
 import { motion as Motion, useInView } from "framer-motion";
 import "./App.css";
-import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaChartLine, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator, FaAward, FaUserFriends } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaChartLine, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator, FaAward, FaUserFriends, FaShieldAlt } from "react-icons/fa";
 import { SiPandas, SiNumpy, SiMysql } from "react-icons/si";
 import Chatbot from "./Chatbot";
 
@@ -279,7 +279,7 @@ export default function App() {
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="hero-stat">
-              <span className="stat-value">2</span>
+              <span className="stat-value">6</span>
               <span className="stat-label">Projects Delivered</span>
             </div>
             <div className="hero-stat">
@@ -413,6 +413,25 @@ export default function App() {
                     <FaGithub /> GitHub
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="project-card">
+            <div className="project-banner fraud-banner">
+              <FaShieldAlt className="project-banner-icon" />
+              <span className="project-banner-label">EDA & Python</span>
+            </div>
+            <div className="project-info">
+              <h3>Fraud Detection Analysis</h3>
+              <ul className="project-points">
+                <li><strong>Situation:</strong> Financial transaction data needed deep analysis to identify fraudulent patterns and reduce losses.</li>
+                <li><strong>Action:</strong> Performed comprehensive EDA using Python, Pandas, and Seaborn — analyzing 555K+ transactions across merchant categories, customer demographics, and geographic trends.</li>
+                <li><strong>Result:</strong> Uncovered high-risk merchant categories, fraud transaction patterns, and delivered actionable fraud prevention recommendations.</li>
+              </ul>
+              <div className="project-links centered">
+                <a href="https://github.com/Samay24/data-analysis_projects/tree/main/Fraud%20Detection%20Analysis" target="_blank" rel="noopener noreferrer" className="github-link">
+                  <FaGithub /> GitHub
+                </a>
               </div>
             </div>
           </div>
