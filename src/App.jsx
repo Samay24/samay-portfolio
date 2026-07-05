@@ -415,8 +415,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="project-card">
+            <div className="project-card">
               <img src="project5.png" alt="Fraud Detection Analysis" />
               <div className="project-info">
                 <h3>Fraud Detection Analysis</h3>
@@ -432,6 +431,7 @@ export default function App() {
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </Section>
 
