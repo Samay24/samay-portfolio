@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import emailjs from "emailjs-com";
 import { motion as Motion, useInView } from "framer-motion";
 import "./App.css";
-import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaChartLine, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator, FaAward, FaUserFriends, FaSearch, FaTools } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaPython, FaChartBar, FaChartPie, FaChartLine, FaDatabase, FaRobot, FaExternalLinkAlt, FaFileExcel, FaCalculator, FaAward, FaUserFriends, FaSearch, FaTools, FaComments } from "react-icons/fa";
 import { SiPandas, SiNumpy, SiMysql } from "react-icons/si";
 import Chatbot from "./Chatbot";
 
@@ -340,9 +340,9 @@ export default function App() {
             <SkillCard name="Pandas" percent="82" icon={SiPandas} />
             <SkillCard name="Data Visualization" percent="85" icon={FaChartPie} />
             <SkillCard name="AI" percent="75" icon={FaRobot} />
-            <SkillCard name="Data Storytelling" percent="85" icon={FaChartLine} />
+            <SkillCard name="Data Storytelling" percent="85" icon={FaComments} />
             <SkillCard name="Research" percent="80" icon={FaUserFriends} />
-            <SkillCard name="EDA" percent="80" icon={FaSearch} />
+            <SkillCard name="EDA" percent="80" icon={FaChartLine} />
             <SkillCard name="Data Cleaning" percent="85" icon={FaTools} />
             <SkillCard name="Reporting & Dashboards" percent="90" icon={FaChartBar} />
           </div>
