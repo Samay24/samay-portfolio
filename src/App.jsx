@@ -345,6 +345,7 @@ export default function App() {
             <SkillCard name="EDA" percent="80" icon={FaChartLine} />
             <SkillCard name="Data Cleaning" percent="85" icon={FaTools} />
             <SkillCard name="Reporting & Dashboards" percent="90" icon={FaChartBar} />
+            <SkillCard name="GitHub" percent="80" icon={FaGithub} />
           </div>
         </div>
       </Section>
