@@ -235,7 +235,7 @@ export default function App() {
         </div>
 
         <div className="nav-actions">
-          <a href="Samay_Gupta_Resume.pdf" download className="resume-btn">
+          <a href="Samay_Gupta_Resume_updated.pdf" download className="resume-btn">
             <FaDownload /> Resume
           </a>
           <button onClick={() => setDarkMode(!darkMode)}>
@@ -322,6 +322,7 @@ export default function App() {
               <p><span>📊 My Approach:</span> Think logically, analyze deeply, and present data clearly.</p>
               <p><span>👥 Who It's For:</span> Built for everyone to see, understand, and make smarter decisions.</p>
               <p><span>✨ My Goal:</span> Make data simple, powerful, and impactful.</p>
+              <p><span>🧠 Currently Learning:</span> Gen AI & Agentic AI</p>
             </div>
           </div>
         </div>

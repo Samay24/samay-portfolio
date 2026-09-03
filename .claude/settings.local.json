@@ -6,7 +6,11 @@
       "Bash(cp \"c:/Users/Samay/OneDrive/Pictures/Screenshots/Screenshot 2026-04-23 134650.png\" \"c:/Users/Samay/samay-portfolio/public/project2.png\")",
       "Bash(cp \"c:/Users/Samay/OneDrive/Pictures/Screenshots/Screenshot 2026-04-23 134704.png\" \"c:/Users/Samay/samay-portfolio/public/project3.png\")",
       "Bash(node -e ' *)",
-      "Bash(curl -s http://localhost:5174/src/App.css)"
+      "Bash(curl -s http://localhost:5174/src/App.css)",
+      "Bash(dir \"C:\\\\Users\\\\Samay\\\\Downloads\")",
+      "mcp__ide__executeCode",
+      "Bash(curl *)",
+      "Bash(npx playwright *)"
     ]
   }
 }
