@@ -58,7 +58,7 @@ const Section = ({ id, children, className = "" }) => {
       className={`section ${className}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.05, margin: "0px 0px -50px 0px" }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {children}
@@ -136,6 +136,7 @@ const certifications = [
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [particlesInit, setParticlesInit] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const form = useRef();
 
   useEffect(() => {
@@ -229,14 +230,24 @@ export default function App() {
       )}
 
       <nav>
-        <div className="nav-links">
-          <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+        <button
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <a href="#hero" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#certifications" onClick={() => setMenuOpen(false)}>Certifications</a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </div>
 
         <div className="nav-actions">
