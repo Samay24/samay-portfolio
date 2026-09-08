@@ -946,3 +946,89 @@ h2 {
 .cert-link svg {
   font-size: 12px;
 }
+
+/* ================= RESPONSIVE POLISH (mobile + small screens) ================= */
+/* Desktop styles above are untouched — everything below only applies ≤768px,
+   plus box-sizing fixes for full-width controls that overflowed their cards. */
+
+/* Full-width controls must include padding in their width */
+.contact-form input,
+.contact-form textarea,
+.service-card button,
+nav {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .hero-typewriter {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Single-column grids so cards never overflow narrow screens */
+  .projects-grid,
+  .services-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .project-card img {
+    height: 180px;
+  }
+  .service-card {
+    padding: 32px 24px;
+  }
+  /* Skills: keep 2 columns but compact so they fit 320px screens */
+  .skills-grid {
+    gap: 12px;
+  }
+  .skill-card {
+    padding: 18px 8px;
+  }
+  .circle {
+    width: 64px;
+    height: 64px;
+  }
+  .counter {
+    font-size: 13px;
+  }
+  .skill-card h3 {
+    font-size: 14px;
+  }
+  /* Hero text fits without overflow */
+  .hero-subtitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  .hero-typewriter {
+    font-size: 18px;
+  }
+  .hero-cta a {
+    text-align: center;
+  }
+  /* Nav actions fit side-by-side on small phones */
+  nav {
+    padding: 8px 14px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .resume-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .nav-actions button {
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
