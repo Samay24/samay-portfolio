@@ -86,6 +86,11 @@ const CertificationCard = ({ title, company, link }) => (
 
 const certifications = [
   {
+    title: "Model Context Protocol",
+    company: "Claude Academy",
+    link: "https://academy.claude.com/verify/e0100d09daf81d9bda02149274deda62"
+  },
+  {
     title: "Artificial Intelligence Fundamentals",
     company: "IBM",
     link: "https://www.credly.com/badges/58ce9798-27a8-40dc-abc1-559e116af927/public_url"
